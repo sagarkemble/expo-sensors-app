@@ -11,6 +11,9 @@ export default function Index() {
       <Link href="/gyroscope">
         <Text style={{ color: "blue" }}>Go to gyroscope</Text>
       </Link>
+      <Link href="/light-sensor">
+        <Text style={{ color: "blue" }}>Go to light-sensor</Text>
+      </Link>
     </View>
   );
 }
