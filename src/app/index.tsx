@@ -1,9 +1,13 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Link } from "expo-router";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
       <Text>Edit src/app/index.tsx to edit this screen.</Text>
+      <Link href="/acecelerometer">
+        <Text style={{ color: "blue" }}>Go to acecelerometer</Text>
+      </Link>
     </View>
   );
 }
