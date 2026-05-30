@@ -1,56 +1,44 @@
-# Welcome to your Expo app 👋
+# Expo Sensors App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native application built with **Expo**, showcasing interactive sensor-driven UI components. Features a sleek, minimalist dark theme (inspired by shadcn/ui) and fully utilizes the device's hardware sensors for a highly engaging user experience.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **3D Interactive Badges:** Tilt your device to see realistic 3D rotations on profile cards, driven smoothly by the device's gyroscope.
+- **Dynamic Reflections:** Smooth shimmer, shadow, and glare effects that realistically react to your device movement.
+- **Hardware Integration:** Real-time reading from Gyroscope, Accelerometer, and Light Sensors via custom hooks.
+- **Minimalist UI:** Clean, dark-mode-first aesthetic with seamless tab navigation and crisp typography.
+- **Fluid Animations:** Powered by `react-native-reanimated` for native-level 60fps performance and physics-based springs.
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- **Framework:** React Native + [Expo](https://expo.dev)
+- **Navigation:** Expo Router (File-based routing)
+- **Animations:** React Native Reanimated
+- **Hardware:** `expo-sensors`
+- **Icons:** `lucide-react-native` & `@expo/vector-icons`
+- **Package Manager:** `bun`
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 1. Install Dependencies
+Make sure you have `bun` installed, then run:
 ```bash
-npm run reset-project
+bun install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Start the Development Server
+```bash
+bun start
+```
 
-### Other setup steps
+### 3. View the App
+Scan the QR code generated in your terminal using the **Expo Go** app on your smartphone! 
+*(Note: Testing on a physical device is highly recommended to actually see the hardware sensors like the Gyroscope working).*
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## Key File Structure
+- `src/app/` - File-based screens matching to bottom tabs router (`_layout.tsx`, `gyroscope.tsx`, etc.)
+- `src/hooks/` - Custom sensor hooks to cleanly pass `x`, `y`, `z` orientations into components.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+*Built with React Native and Expo Router.*
