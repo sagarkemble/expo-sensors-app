@@ -8,6 +8,9 @@ export default function Index() {
       <Link href="/acecelerometer">
         <Text style={{ color: "blue" }}>Go to acecelerometer</Text>
       </Link>
+      <Link href="/gyroscope">
+        <Text style={{ color: "blue" }}>Go to gyroscope</Text>
+      </Link>
     </View>
   );
 }
