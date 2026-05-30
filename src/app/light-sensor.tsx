@@ -158,7 +158,7 @@ export default function SunMeter() {
         {/* Title */}
         <View style={styles.titleRow}>
           <View style={styles.iconBox}>
-            <Text style={styles.iconGlyph}>◉</Text>
+            <Sun size={18} color="#555" />
           </View>
           <Text style={styles.title}>sun meter</Text>
         </View>
@@ -312,7 +312,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  iconGlyph: { color: "#555", fontSize: 14 },
+  iconGlyph: { color: "#555", fontSize: 20 },
   title: {
     fontSize: 13,
     fontWeight: "500",
