@@ -22,7 +22,7 @@ const { width } = Dimensions.get("window");
 const CARD_W = width * 0.82;
 const MAX_TILT = 22;
 const SPRING = { damping: 16, stiffness: 110, mass: 0.9 };
-const PAD = 22; // single source of truth for all padding
+const PAD = 22;
 
 const USER = {
   name: "Sagar Kemble",

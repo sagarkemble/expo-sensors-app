@@ -5,14 +5,21 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#080808" }}>
         <Tabs
           screenOptions={{
             headerShown: false,
+            tabBarActiveTintColor: "#ededed",
+            tabBarInactiveTintColor: "#666",
             tabBarStyle: {
-              height: 60,
-              borderTopWidth: 0,
-              paddingTop: 4,
+              backgroundColor: "#080808",
+              borderTopWidth: 0.5,
+              borderTopColor: "#222",
+              paddingTop: 5,
+            },
+            tabBarLabelStyle: {
+              fontSize: 11,
+              fontWeight: "500",
             },
           }}
         >
