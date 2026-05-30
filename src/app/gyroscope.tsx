@@ -95,6 +95,28 @@ export default function GitHubBadge() {
     return { transform: [{ translateX: tx }, { translateY: ty }], opacity };
   });
 
+  const glareStyle = useAnimatedStyle(() => {
+    const tx = interpolate(
+      rotY.value,
+      [-MAX_TILT, MAX_TILT],
+      [CARD_W * 1.5, -CARD_W * 1.5],
+    );
+    const ty = interpolate(
+      rotX.value,
+      [-MAX_TILT, MAX_TILT],
+      [CARD_W * 1.5, -CARD_W * 1.5],
+    );
+    const opacity = interpolate(
+      Math.abs(rotX.value) + Math.abs(rotY.value),
+      [0, MAX_TILT],
+      [0.0, 0.15],
+    );
+    return {
+      transform: [{ translateX: tx }, { translateY: ty }, { rotate: "45deg" }],
+      opacity,
+    };
+  });
+
   const shadowStyle = useAnimatedStyle(() => {
     const d = (Math.abs(rotX.value) + Math.abs(rotY.value)) / (MAX_TILT * 2);
     return {
@@ -114,6 +136,10 @@ export default function GitHubBadge() {
         <Animated.View style={[styles.card, cardStyle]}>
           <Animated.View
             style={[styles.shimmer, shimmerStyle]}
+            pointerEvents="none"
+          />
+          <Animated.View
+            style={[styles.glare, glareStyle]}
             pointerEvents="none"
           />
 
@@ -268,6 +294,17 @@ const styles = StyleSheet.create({
     top: -CARD_W,
     left: -CARD_W,
     zIndex: 20,
+    pointerEvents: "none",
+  },
+
+  glare: {
+    position: "absolute",
+    width: CARD_W * 4,
+    height: CARD_W * 0.5,
+    backgroundColor: "#fff",
+    top: -CARD_W,
+    left: -CARD_W,
+    zIndex: 21,
     pointerEvents: "none",
   },
 
