@@ -1,7 +1,7 @@
 import useAccelerometer from "@/hooks/use-accelerometer";
 import { StyleSheet, Text, View } from "react-native";
 
-const acecelerometer = () => {
+const accelerometer = () => {
   const { available, x, y, z } = useAccelerometer();
   return (
     <View>
@@ -13,6 +13,6 @@ const acecelerometer = () => {
   );
 };
 
-export default acecelerometer;
+export default accelerometer;
 
 const styles = StyleSheet.create({});
